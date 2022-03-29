@@ -7,6 +7,6 @@
 * Mar 10, Thursday - [Getter Setters](github.com/jivvan/oop-class-code/tree/main/mar-10-thu)
 * Mar 23, Wednesday - [Constructor and Desctructor](github.com/jivvan/oop-class-code/tree/main/mar-23-wed)
 * Mar 24, Thursday - [Object as an argument in C++](github.com/jivvan/oop-class-code/tree/main/mar-24-thu) 
-* Mar 29, Tuesday - [Scope Resolution Operator](github.com/jivvan/oop-class-code/tree/main/mar-29-tue)
+* Mar 29, Tuesday - [Scope Resolution Operator](github.com/jivvan/oop-class-code/tree/mainf/mar-29-tue)
 
 ### Chapter 4 (Operator Overloading)
