@@ -50,6 +50,47 @@ int main()
 }
 ```
 
+Another example could be:
+```C++
+#include <iostream>
+using namespace std;
+
+class Example
+{
+public:
+    int a;
+
+    // this function will take an object as an argument
+    void add(Example E)
+    {
+        a = a + E.a;
+    }
+};
+
+// Driver code
+int main()
+{
+    // create objects
+    Example E1, E2;
+
+    // values are initialized for both objects
+    E1.a = 50;
+    E2.a = 100;
+
+    cout << "Initial values\n";
+    cout << "Value of object 1:" << E1.a << endl
+         << "Value of object 2:" << E2.a;
+    // passing object as an argument to add function
+    E2.add(E1);
+    // changed values after calling add function
+    cout << "Final values\n";
+    cout << "Value of object 1:" << E1.a << endl
+         << "Value of object 2:" << E2.a;
+
+    return 0;
+}
+```
+
 ## Returning Object from function
 A function can also return objects either by value of by reference. When an object is returned by value froma a function, a temporary object is created within the function, which holds the return value. This value is further assigned to another object in the calling function. 
 The syntax for defining a funciton that returns an object by value is:
@@ -64,26 +105,33 @@ To understand the concept of returning an object by value from a function, consi
 Example: A program to demonstrate the concept of returning objects from a function
 
 ```C++
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Weight{
-    int kilogram;
-    int gram;
-    public:
-    void getdata();
-    void putdata();
-    void sum_weight(Weight,Weight);
-    Weight sum_weight(Weight);
+
+class Student
+{
+public:
+    double marks1, marks2;
 };
 
-void Weight::getdata(){
-    cout<<kilogram<<" kgs. and "<<gram<<" gms.";
+Student createStudent()
+{
+    Student student;
+    // initialize member variables of student
+    student.marks1 = 96.5;
+    student.marks2 = 75.0;
+    return student;
 }
 
-void Weight::putdata(){
-    cout<<"Enter kilogram"<<endl;
-    cin>>kilogram;
-        cout<<"Enter gram"<<endl;
-    cin>>gram;
+int main()
+{
+    Student student1;
+
+    // call function
+    student1 = createStudent();
+    // print member variables of student
+    cout << "Marks 1 = " << student1.marks1 << endl;
+    cout << "Marks 2 = " << student1.marks2 << endl;
+    return 0;
 }
 ```
